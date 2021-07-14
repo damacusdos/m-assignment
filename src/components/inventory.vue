@@ -8,14 +8,14 @@
       </div>
     </div>
     <div class="table-header">
-      <span class="record-icon"></span>
-      <span class="record-list-id">ID</span>
-      <span class="record-title">Title Name</span>
-      <span class="record-type">Type</span>
-      <span class="record-season">Season</span>
-      <span class="record-episode">Episode</span>
-      <span class="record-published">Published</span>
-      <span class="record-program">Programmable</span>
+      <span class="record-icon head"></span>
+      <span class="record-list-id head">ID</span>
+      <span class="record-title head">Title Name</span>
+      <span class="record-type head">Type</span>
+      <span class="record-season head">Season</span>
+      <span class="record-episode head">Episode</span>
+      <span class="record-published head">Published</span>
+      <span class="record-program head">Programmable</span>
     </div>
     <ul class="table-body">
       <li v-for="(info, index) of filteredInventory" :key="index" class="record-item"> 
@@ -170,11 +170,13 @@ export default {
   display: flex;
   align-items: center;
   padding: 0 .5rem;
+  background-color:rgba(32, 32, 32, 0.05);
 }
 input {
   border: none;
   height: 90%;
   width: 80%;
+  background-color: transparent;
 }
 input:focus {
   border: none;
@@ -190,6 +192,7 @@ input:focus {
   align-items: center;
   justify-content: space-between;
   border-radius: 4px 4px 0 0;
+  background-color:rgba(32, 32, 32, 0.05);
 }
 .table-body {
   list-style-type: none;
@@ -197,6 +200,9 @@ input:focus {
   padding-left: 0;
   border-right: 1px solid #ccc;
   border-left: 1px solid #ccc;
+}
+.head {
+  font-weight: 500;
 }
 .record-item {
   /* display: flex;
@@ -234,14 +240,17 @@ input:focus {
 .record-title {
   width: 400px;
   font-size: 12px;
+  font-weight: 500;
 }
 .record-season-title {
   width: 350px;
   font-size: 12px;
+  font-weight: 500;
 }
 .record-episode-title {
   width: 300px;
-  font-size: 12px;
+  font-size: 14px;
+  font-weight: 500;
 }
 .record-type {
   width: 60px;
